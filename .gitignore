@@ -18,3 +18,11 @@ tags
 .bsp/
 .conda-env/
 .#*
+
+# Untracked files 
+generators/constellation
+toolchains/libgloss
+toolchains/riscv-tools/riscv-isa-sim
+toolchains/riscv-tools/riscv-pk
+toochains/riscv-tools/riscv-tests
+tools/api-config-chispalliance
