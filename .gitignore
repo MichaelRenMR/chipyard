@@ -4,10 +4,8 @@ docs/warnings.txt
 target
 *.jar
 *.stamp
-*.vcd
 *.swp
 *.swo
-*.log
 *#
 *~
 .idea
