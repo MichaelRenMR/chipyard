@@ -100,3 +100,117 @@ clean-sim:
 
 clean-sim-debug:
 	rm -rf $(model_dir_debug) $(build_dir)/vc_hdrs.h $(sim_debug) $(sim_debug).daidir ucli.key
+
+
+ROCKETFLAGS=USE_FSDB=1 CONFIG=RocketConfig
+MEGABOOMFLAGS=USE_FSDB=1 CONFIG=MegaBoomConfig
+DUALCHANNELMEGABOOMFLAGS=USE_FSDB=1 CONFIG=DualChannelMegaBoomConfig
+
+read_tests_rocket:
+	make run-binary-debug BINARY='../../mytests/11-2022/read/read4096.riscv' $(ROCKETFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/read/read8192.riscv' $(ROCKETFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/read/read16384.riscv' $(ROCKETFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/read/read32768.riscv' $(ROCKETFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/read/read65536.riscv' $(ROCKETFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/read/read524288.riscv' $(ROCKETFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/read/read1048576.riscv' $(ROCKETFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/read/read2097152.riscv' $(ROCKETFLAGS)
+
+read_tests_boom:
+	make run-binary-debug BINARY='../../mytests/11-2022/read/read4096.riscv' $(DUALCHANNELMEGABOOMFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/read/read8192.riscv' $(DUALCHANNELMEGABOOMFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/read/read16384.riscv' $(DUALCHANNELMEGABOOMFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/read/read32768.riscv' $(DUALCHANNELMEGABOOMFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/read/read65536.riscv' $(DUALCHANNELMEGABOOMFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/read/read524288.riscv' $(DUALCHANNELMEGABOOMFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/read/read1048576.riscv' $(DUALCHANNELMEGABOOMFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/read/read2097152.riscv' $(DUALCHANNELMEGABOOMFLAGS)
+
+write_tests_rocket:
+	make run-binary-debug BINARY='../../mytests/11-2022/write/write4096.riscv' $(ROCKETFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/write/write8192.riscv' $(ROCKETFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/write/write16384.riscv' $(ROCKETFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/write/write32768.riscv' $(ROCKETFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/write/write65536.riscv' $(ROCKETFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/write/write524288.riscv' $(ROCKETFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/write/write1048576.riscv' $(ROCKETFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/write/write2097152.riscv' $(ROCKETFLAGS)
+
+write_tests_boom:
+	make run-binary-debug BINARY='../../mytests/11-2022/write/write4096.riscv' $(DUALCHANNELMEGABOOMFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/write/write8192.riscv' $(DUALCHANNELMEGABOOMFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/write/write16384.riscv' $(DUALCHANNELMEGABOOMFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/write/write32768.riscv' $(DUALCHANNELMEGABOOMFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/write/write65536.riscv' $(DUALCHANNELMEGABOOMFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/write/write524288.riscv' $(DUALCHANNELMEGABOOMFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/write/write1048576.riscv' $(DUALCHANNELMEGABOOMFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/write/write2097152.riscv' $(DUALCHANNELMEGABOOMFLAGS)
+
+update_tests_rocket:
+	make run-binary-debug BINARY='../../mytests/11-2022/update/update4096.riscv' $(ROCKETFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/update/update8192.riscv' $(ROCKETFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/update/update16384.riscv' $(ROCKETFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/update/update32768.riscv' $(ROCKETFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/update/update65536.riscv' $(ROCKETFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/update/update524288.riscv' $(ROCKETFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/update/update1048576.riscv' $(ROCKETFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/update/update2097152.riscv' $(ROCKETFLAGS)
+
+update_tests_boom:
+	make run-binary-debug BINARY='../../mytests/11-2022/update/update4096.riscv' $(DUALCHANNELMEGABOOMFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/update/update8192.riscv' $(DUALCHANNELMEGABOOMFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/update/update16384.riscv' $(DUALCHANNELMEGABOOMFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/update/update32768.riscv' $(DUALCHANNELMEGABOOMFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/update/update65536.riscv' $(DUALCHANNELMEGABOOMFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/update/update524288.riscv' $(DUALCHANNELMEGABOOMFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/update/update1048576.riscv' $(DUALCHANNELMEGABOOMFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/update/update2097152.riscv' $(DUALCHANNELMEGABOOMFLAGS)
+
+copy_tests_rocket:
+	make run-binary-debug BINARY='../../mytests/11-2022/copy/copy4096.riscv' $(ROCKETFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/copy/copy8192.riscv' $(ROCKETFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/copy/copy16384.riscv' $(ROCKETFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/copy/copy32768.riscv' $(ROCKETFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/copy/copy65536.riscv' $(ROCKETFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/copy/copy524288.riscv' $(ROCKETFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/copy/copy1048576.riscv' $(ROCKETFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/copy/copy2097152.riscv' $(ROCKETFLAGS)
+
+copy_tests_boom:
+	make run-binary-debug BINARY='../../mytests/11-2022/copy/copy4096.riscv' $(DUALCHANNELMEGABOOMFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/copy/copy8192.riscv' $(DUALCHANNELMEGABOOMFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/copy/copy16384.riscv' $(DUALCHANNELMEGABOOMFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/copy/copy32768.riscv' $(DUALCHANNELMEGABOOMFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/copy/copy65536.riscv' $(DUALCHANNELMEGABOOMFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/copy/copy524288.riscv' $(DUALCHANNELMEGABOOMFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/copy/copy1048576.riscv' $(DUALCHANNELMEGABOOMFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/copy/copy2097152.riscv' $(DUALCHANNELMEGABOOMFLAGS)
+
+read2_tests_rocket:
+	make run-binary-debug BINARY='../../mytests/11-2022/read2/read2_4096.riscv' $(ROCKETFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/read2/read2_8192.riscv' $(ROCKETFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/read2/read2_16384.riscv' $(ROCKETFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/read2/read2_32768.riscv' $(ROCKETFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/read2/read2_65536.riscv' $(ROCKETFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/read2/read2_524288.riscv' $(ROCKETFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/read2/read2_1048576.riscv' $(ROCKETFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/read2/read2_2097152.riscv' $(ROCKETFLAGS)
+
+read2_tests_boom:
+	make run-binary-debug BINARY='../../mytests/11-2022/read2/read2_4096.riscv' $(DUALCHANNELMEGABOOMFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/read2/read2_8192.riscv' $(DUALCHANNELMEGABOOMFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/read2/read2_16384.riscv' $(DUALCHANNELMEGABOOMFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/read2/read2_32768.riscv' $(DUALCHANNELMEGABOOMFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/read2/read2_65536.riscv' $(DUALCHANNELMEGABOOMFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/read2/read2_524288.riscv' $(DUALCHANNELMEGABOOMFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/read2/read2_1048576.riscv' $(DUALCHANNELMEGABOOMFLAGS)
+	make run-binary-debug BINARY='../../mytests/11-2022/read2/read2_2097152.riscv' $(DUALCHANNELMEGABOOMFLAGS)
+
+read_test_allBooms: 
+	make run-binary-debug BINARY='../../mytests/11-2022/read/read65536.riscv' CONFIG=C2B2MegaBoomConfig
+	make run-binary-debug BINARY='../../mytests/11-2022/read/read65536.riscv' CONFIG=C4B4MegaBoomConfig 
+	make run-binary-debug BINARY='../../mytests/11-2022/read/read65536.riscv' CONFIG=C8B8MegaBoomConfig
+	make run-binary-debug BINARY='../../mytests/11-2022/read/read65536.riscv' CONFIG=C2B4MegaBoomConfig 
+	make run-binary-debug BINARY='../../mytests/11-2022/read/read65536.riscv' CONFIG=C2B8MegaBoomConfig 
+	make run-binary-debug BINARY='../../mytests/11-2022/read/read65536.riscv' CONFIG=C4B8MegaBoomConfig
+

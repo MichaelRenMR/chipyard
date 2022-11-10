@@ -6,6 +6,40 @@ import freechips.rocketchip.config.{Config}
 // BOOM Configs
 // ---------------------
 
+class C4B8MegaBoomConfig extends Config(
+  new freechips.rocketchip.subsystem.WithNMemoryChannels(4) ++
+  new freechips.rocketchip.subsystem.WithNBanks(8) ++
+  new chipyard.MegaBoomConfig)
+
+class C2B8MegaBoomConfig extends Config(
+  new freechips.rocketchip.subsystem.WithNMemoryChannels(2) ++
+  new freechips.rocketchip.subsystem.WithNBanks(8) ++
+  new chipyard.MegaBoomConfig)
+
+class C2B4MegaBoomConfig extends Config(
+  new freechips.rocketchip.subsystem.WithNMemoryChannels(2) ++
+  new freechips.rocketchip.subsystem.WithNBanks(4) ++
+  new chipyard.MegaBoomConfig)
+
+class C8B8MegaBoomConfig extends Config(
+  new freechips.rocketchip.subsystem.WithNMemoryChannels(8) ++
+  new freechips.rocketchip.subsystem.WithNBanks(8) ++
+  new chipyard.MegaBoomConfig)
+
+class C4B4MegaBoomConfig extends Config(
+  new freechips.rocketchip.subsystem.WithNMemoryChannels(4) ++
+  new freechips.rocketchip.subsystem.WithNBanks(4) ++
+  new chipyard.MegaBoomConfig)
+
+class C2B2MegaBoomConfig extends Config(
+  new freechips.rocketchip.subsystem.WithNMemoryChannels(2) ++
+  new freechips.rocketchip.subsystem.WithNBanks(2) ++
+  new chipyard.MegaBoomConfig)
+
+class DualChannelMegaBoomConfig extends Config(
+  new freechips.rocketchip.subsystem.WithNMemoryChannels(2) ++
+  new chipyard.MegaBoomConfig)
+
 class SmallBoomConfig extends Config(
   new boom.common.WithNSmallBooms(1) ++                          // small boom config
   new chipyard.config.AbstractConfig)
