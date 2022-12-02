@@ -5,6 +5,49 @@ import freechips.rocketchip.config.{Config}
 // ---------------------
 // BOOM Configs
 // ---------------------
+class C8B1MegaBoomConfig extends Config(
+  new freechips.rocketchip.subsystem.WithNMemoryChannels(8) ++
+  new freechips.rocketchip.subsystem.WithNBanks(1) ++
+  new chipyard.MegaBoomConfig)
+
+class C8B2MegaBoomConfig extends Config(
+  new freechips.rocketchip.subsystem.WithNMemoryChannels(8) ++
+  new freechips.rocketchip.subsystem.WithNBanks(2) ++
+  new chipyard.MegaBoomConfig)
+
+class C8B4MegaBoomConfig extends Config(
+  new freechips.rocketchip.subsystem.WithNMemoryChannels(8) ++
+  new freechips.rocketchip.subsystem.WithNBanks(4) ++
+  new chipyard.MegaBoomConfig)
+
+
+class C4B1MegaBoomConfig extends Config(
+  new freechips.rocketchip.subsystem.WithNMemoryChannels(4) ++
+  new freechips.rocketchip.subsystem.WithNBanks(1) ++
+  new chipyard.MegaBoomConfig)
+
+class C4B2MegaBoomConfig extends Config(
+  new freechips.rocketchip.subsystem.WithNMemoryChannels(4) ++
+  new freechips.rocketchip.subsystem.WithNBanks(2) ++
+  new chipyard.MegaBoomConfig)
+
+
+class C1B2MegaBoomConfig extends Config(
+  new freechips.rocketchip.subsystem.WithNMemoryChannels(1) ++
+  new freechips.rocketchip.subsystem.WithNBanks(2) ++
+  new chipyard.MegaBoomConfig)
+
+class C1B4MegaBoomConfig extends Config(
+  new freechips.rocketchip.subsystem.WithNMemoryChannels(1) ++
+  new freechips.rocketchip.subsystem.WithNBanks(4) ++
+  new chipyard.MegaBoomConfig)
+
+class C1B8MegaBoomConfig extends Config(
+  new freechips.rocketchip.subsystem.WithNMemoryChannels(1) ++
+  new freechips.rocketchip.subsystem.WithNBanks(8) ++
+  new chipyard.MegaBoomConfig)
+
+
 
 class C4B8MegaBoomConfig extends Config(
   new freechips.rocketchip.subsystem.WithNMemoryChannels(4) ++

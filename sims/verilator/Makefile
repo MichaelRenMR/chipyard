@@ -252,3 +252,6 @@ clean-sim:
 
 clean-sim-debug:
 	rm -rf $(model_dir_debug) $(sim_debug)
+
+run-reads:
+	make run-binary-debug BINARY='../../mytests/read4096.riscv' && make run-binary-debug BINARY='../../mytests/read8192.riscv' && make run-binary-debug BINARY='../../mytests/read16384.riscv' && make run-binary-debug BINARY='../../mytests/read32768.riscv' && make run-binary-debug BINARY='../../mytests/read524288.riscv' && make run-binary-debug BINARY='../../mytests/read1048576.riscv' && make run-binary-debug BINARY='../../mytests/read2097152.riscv'

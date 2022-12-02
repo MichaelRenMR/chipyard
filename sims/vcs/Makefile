@@ -207,10 +207,20 @@ read2_tests_boom:
 	make run-binary-debug BINARY='../../mytests/11-2022/read2/read2_2097152.riscv' $(DUALCHANNELMEGABOOMFLAGS)
 
 read_test_allBooms: 
-	make run-binary-debug BINARY='../../mytests/11-2022/read/read65536.riscv' CONFIG=C2B2MegaBoomConfig
-	make run-binary-debug BINARY='../../mytests/11-2022/read/read65536.riscv' CONFIG=C4B4MegaBoomConfig 
-	make run-binary-debug BINARY='../../mytests/11-2022/read/read65536.riscv' CONFIG=C8B8MegaBoomConfig
-	make run-binary-debug BINARY='../../mytests/11-2022/read/read65536.riscv' CONFIG=C2B4MegaBoomConfig 
-	make run-binary-debug BINARY='../../mytests/11-2022/read/read65536.riscv' CONFIG=C2B8MegaBoomConfig 
-	make run-binary-debug BINARY='../../mytests/11-2022/read/read65536.riscv' CONFIG=C4B8MegaBoomConfig
-
+	make run-binary-debug BINARY='../../mytests/11-2022/read/read65536.riscv' CONFIG=C2B2MegaBoomConfig USE_FSDB=1
+	make run-binary-debug BINARY='../../mytests/11-2022/read/read65536.riscv' CONFIG=C4B4MegaBoomConfig USE_FSDB=1
+	make run-binary-debug BINARY='../../mytests/11-2022/read/read65536.riscv' CONFIG=C8B8MegaBoomConfig USE_FSDB=1
+	make run-binary-debug BINARY='../../mytests/11-2022/read/read65536.riscv' CONFIG=C2B4MegaBoomConfig USE_FSDB=1
+	make run-binary-debug BINARY='../../mytests/11-2022/read/read65536.riscv' CONFIG=C2B8MegaBoomConfig USE_FSDB=1
+	make run-binary-debug BINARY='../../mytests/11-2022/read/read65536.riscv' CONFIG=C4B8MegaBoomConfig USE_FSDB=1
+	
+read_test_badBooms: 
+	make run-binary-debug BINARY='../../mytests/11-2022/read/read65536.riscv' CONFIG=C1B2MegaBoomConfig USE_FSDB=1
+	make run-binary-debug BINARY='../../mytests/11-2022/read/read65536.riscv' CONFIG=C1B4MegaBoomConfig USE_FSDB=1
+	make run-binary-debug BINARY='../../mytests/11-2022/read/read65536.riscv' CONFIG=C1B8MegaBoomConfig USE_FSDB=1
+	make run-binary-debug BINARY='../../mytests/11-2022/read/read65536.riscv' CONFIG=C4B1MegaBoomConfig USE_FSDB=1
+	make run-binary-debug BINARY='../../mytests/11-2022/read/read65536.riscv' CONFIG=C4B2MegaBoomConfig USE_FSDB=1
+	make run-binary-debug BINARY='../../mytests/11-2022/read/read65536.riscv' CONFIG=C8B1MegaBoomConfig USE_FSDB=1
+	make run-binary-debug BINARY='../../mytests/11-2022/read/read65536.riscv' CONFIG=C8B2MegaBoomConfig USE_FSDB=1
+	make run-binary-debug BINARY='../../mytests/11-2022/read/read65536.riscv' CONFIG=C8B4MegaBoomConfig USE_FSDB=1
+	
