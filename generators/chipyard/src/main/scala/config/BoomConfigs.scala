@@ -5,6 +5,30 @@ import freechips.rocketchip.config.{Config}
 // ---------------------
 // BOOM Configs
 // ---------------------
+class C2B2M64MegaBoomConfig extends Config(
+  new freechips.rocketchip.subsystem.WithNMemoryChannels(2) ++
+  new freechips.rocketchip.subsystem.WithNBanks(2) ++
+  new boom.common.WithNCustomMegaBoomsWithKmshr(1, 64) ++                         
+  new chipyard.config.AbstractConfig)
+
+class C2B2M32MegaBoomConfig extends Config(
+  new freechips.rocketchip.subsystem.WithNMemoryChannels(2) ++
+  new freechips.rocketchip.subsystem.WithNBanks(2) ++
+  new boom.common.WithNCustomMegaBoomsWithKmshr(1, 32) ++                         
+  new chipyard.config.AbstractConfig)
+
+class C2B2M16MegaBoomConfig extends Config(
+  new freechips.rocketchip.subsystem.WithNMemoryChannels(2) ++
+  new freechips.rocketchip.subsystem.WithNBanks(2) ++
+  new boom.common.WithNCustomMegaBoomsWithKmshr(1, 16) ++                         
+  new chipyard.config.AbstractConfig)
+
+class C2B2M4MegaBoomConfig extends Config(
+  new freechips.rocketchip.subsystem.WithNMemoryChannels(2) ++
+  new freechips.rocketchip.subsystem.WithNBanks(2) ++
+  new boom.common.WithNCustomMegaBoomsWithKmshr(1, 4) ++                         
+  new chipyard.config.AbstractConfig)
+
 class C8B1MegaBoomConfig extends Config(
   new freechips.rocketchip.subsystem.WithNMemoryChannels(8) ++
   new freechips.rocketchip.subsystem.WithNBanks(1) ++
