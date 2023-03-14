@@ -13,10 +13,7 @@ int main(void)
   register char* mem_curr;
   register int val;
 	register unsigned long start, end;
-
   mem_curr = 0x88000000;
-
-// TODO: Inline assembly
   start = rdcycle(); 
   for (i = 0; i < NUM_ITERS; i++) {
     __asm__ __volatile__("lw %0, %2(%1);" 
